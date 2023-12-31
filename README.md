@@ -117,8 +117,33 @@ The below histogram shows the relationship between the temperature and the numbe
   <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/temperature_impact.png" width="800" height="400"> 
 </p>
 
+There is a noticeable decline in ride counts as temperatures exceed 75 degrees. This suggests that very high temperatures (above 75) and very low temperatures (below 35) may deter people from taking rides.
+
 ### Census Impact
-### season/holiday/calnedar/event Impact
+
+The below figures show the correlations between mean travel time in a taxi zone, average vehicles per household, and total rides - 
+
+<br>
+
+<p align="center">
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/mean%20travel%20time.png" width="400" height="300"> <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/vehicles.png" width="400" height="300">
+</p>
+
+In both cases, there is a negative correlation conveying that as average commute time increases, the total cab rides tend to decrease. This could suggest that longer travel times may discourage the use of cabs, possibly due to higher costs or longer waiting times, leading commuters to seek alternative modes of transportation. Similarly, as the average number of vehicles per household increases the total number of cab rides decreases, suggesting that households with more access to personal vehicles are less likely to use cabs for transportation.
+
+<br>
+
+Additionally, the below scatterplot shows that a majority of the low average household income zones have lower total number of cab rides compared to their counterparts.
+
+<p align="center">
+  <br>
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/income_scatterplot.png" width="800" height="400"> 
+</p>
+
+### Calendar / Events Impact
+
+
+
 
 
 ## Results
