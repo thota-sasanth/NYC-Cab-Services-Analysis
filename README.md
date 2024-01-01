@@ -25,12 +25,13 @@ The NYC TLC (Taxi & Limousine Commission) is a government agency responsible for
 
 
 ## Experimental Setup:
-Considering that the total data has 0.5 Billion NYC taxi trips (>90 GB size), I experimented with different BIG DATA setups. 
-* Dask + Coiled Servers + GCP Buckets: Although the Dask framework performs well with Coiled servers (since a compatible ecosystem is being provided by the same company), I encountered reliability issues while loading large datasets, especially with data stored in GCP buckets and Azure Blob Storage.
-* Databricks (with PySpark) + Azure Blob Storage: I opted for Databricks due to its robust support for the PySpark framework, and initially chose Azure Blob Storage for data storage. However, after extensive testing, I found that Azure Blob Storage was not sufficiently efficient for reading large datasets.
+Considering that the total data has __0.5 Billion+__ NYC taxi trips (>90 GB size), I experimented with different __BIG DATA__ setups. 
+* __Dask + Coiled Servers + GCP Buckets__: Although the Dask framework performs well with Coiled servers (since a compatible ecosystem is being provided by the same company), I encountered reliability issues while loading large datasets, especially with data stored in GCP buckets and Azure Blob Storage.
+* __Databricks (with PySpark) + Azure Blob Storage__: I opted for Databricks due to its robust support for the PySpark framework, and initially chose Azure Blob Storage for data storage. However, after extensive testing, I found that Azure Blob Storage was not sufficiently efficient for reading large datasets.
 <br>
 Finally, I was able to sucessfully work on the data using the following setup -
-* Databricks (with PySpark) + Azure Data Lake Storage: I configured separate Databricks clusters with distributed and scalable architecture, ranging from 4 to 8 worker nodes with one master node. Each node is powered by Photon acceleration, and delta cache optimization and is equipped with 16GB of RAM and 4 cores.
+<br>
+* __Databricks (with PySpark) + Azure Data Lake Storage__: I configured separate Databricks clusters with distributed and scalable architecture, ranging from 4 to 8 worker nodes with one master node. Each node is powered by Photon acceleration, and delta cache optimization and is equipped with 16GB of RAM and 4 cores.
 
 ## Analysis:
 
