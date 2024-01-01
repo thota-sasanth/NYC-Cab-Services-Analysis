@@ -121,7 +121,7 @@ Additionally, the below scatterplot shows that a majority of the low average hou
 The below sunburst chart shows the trips variation across different seasons - 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/season.png" width="300" height="300"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/season.png" width="500" height="500"> 
 </p>
 
 There is a significant increase (around 22%) in taxi revenue from 2021 to 2022, which would probably indicate the effect of the COVID-19 pandemic. Apart from that, the highest revenue comes from the Fall season which could be related to various factors such as pleasant weather, the beginning of the school year, etc.
