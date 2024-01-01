@@ -72,7 +72,7 @@ We can see for weekends that there is a high frequency of rides during late nigh
 The below line plot illustrates the variability in taxi travel times from Manhattan to JFK Airport - 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/trip_time_var.png" width="800" height="400"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/trip_time_var.png" width="500" height="400"> 
 </p>
 
 The median travel time, represented by the blue line, reveals that the longest durations are in the afternoon, likely due to peak traffic, while the shortest is late at night when roads are clearer. There's a wider spread in travel times during the day, suggesting inconsistent trip durations possibly due to fluctuating traffic conditions or diversions. 
