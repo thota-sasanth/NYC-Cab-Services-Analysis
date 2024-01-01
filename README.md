@@ -159,7 +159,7 @@ Other advanced models are -
 * Gradient Boosting Regression: Gradient Boosting Regression, especially in the form of algorithms like Gradient Boosted Trees (GBT), tends to provide high predictive accuracy for numerical prediction models. Apart from this, it is robust to overfitting and is an ensemble model that builds decision trees sequentially. It performed similar to Random Forest Regression.
 * Custom Ensemble Model: A custom ensemble model made out of the previously defined linear regression, random forest and gradient boosting models was defined. I have assigned weights for each model to be the inverse of their RMSE error on their predictions. This model provides a good amount of improvement on overall predictions.
 
-<table align="center">
+<div align="center">
   <br>
 |  | RMSE | MAE | MAPE (%) | R2 |
 | --- | --- | --- | --- | --- |
@@ -169,6 +169,6 @@ Other advanced models are -
 | Linear Regression | 6.38 | 4.07 | 23.64 | 0.76 | 
 | Linear Regression | 6.38 | 3.93 | 21.77 | 0.76 | 
 | Linear Regression | 6.19 | 3.56 | 20.96 | 0.73 | 
-</table>
+</div>
 
 <br>
