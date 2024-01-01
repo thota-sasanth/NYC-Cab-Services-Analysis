@@ -169,8 +169,8 @@ Other advanced models are -
 | Mean Model       | 13.05 | 9.92 | 64.25    | -1.42 x 10^-14    | 
 | Linear Regression| 6.40  | 4.16 | 24.73    | 0.76              | 
 | Linear Regression + ElasticNet Regularization | 6.45 | 4.18 | 24.94 | 0.75 |
-| Linear Regression| 6.38  | 4.07 | 23.64    | 0.76              | 
-| Linear Regression| 6.38  | 3.93 | 21.77    | 0.76              | 
-| Linear Regression| 6.19  | 3.56 | 20.96    | 0.73              |
+| Random Forest Regression| 6.38  | 4.07 | 23.64    | 0.76              | 
+| Gradient Boosting Regression| 6.38  | 3.93 | 21.77    | 0.76              | 
+| Custom Ensemble Model| 6.19  | 3.56 | 20.96    | 0.73              |
 
 <br>
