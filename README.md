@@ -113,7 +113,7 @@ Additionally, the below scatterplot shows that a majority of the low average hou
 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/income_scatterplot.png" width="600" height="300"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/income_scatterplot.png" width="500" height="350"> 
 </p>
 
 ### Calendar / Events Impact
