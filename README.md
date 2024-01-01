@@ -8,31 +8,6 @@ To conduct a comprehensive analysis of Cab services (Yellow taxis and High Volum
 
 In the bustling metropolis of New York City (NYC), taxi rides serve as a crucial component of urban transportation, embodying the dynamic heartbeat of the city that never sleeps. Understanding the intricate usage patterns of these taxis is a practical necessity for optimizing the efficiency and reliability of the city's transportation network. Various factors, such as weather conditions, events, and demographic shifts, significantly impact the demand and supply of taxi services, making it imperative for transportation planners and stakeholders to discern these influences. Deciphering how these factors interplay with the ebb and flow of taxi rides not only ensures smoother transportation experiences for riders but also lays the foundation for informed decision-making in the ever-evolving landscape of New York City's vibrant urban environment. Additionally, forecasting fare trends becomes a crucial aspect of urban transportation planning. Accurate fare predictions empower both passengers and drivers with valuable information, fostering a more transparent and equitable system. It helps passengers to plan and budget their transportation costs in advance and for cab services to optimize their operations and improve customer satisfaction. 
 
-## Simulated Annealing
-
-In such large search spaces, simulated annealing (a heuristic-based optimization algorithm) could be very
-useful in finding a reasonably good solution within a limited time. This algorithm is inspired by the metallurgical practice of
-annealing, where metals are heated to a high temperature and then gradually cooled. This controlled
-process allows metal atoms to rearrange themselves into a more stable crystalline structure, thus
-reducing defects and achieving a lower-energy state. Similarly, simulated annealing in optimization
-allows for a deliberate and probabilistic exploration of the solution space, which helps in finding a
-globally optimal solution by avoiding being trapped in local optima.
-
-<br>
-
-<p align="center">
-  <img src="https://github.com/thota-sasanth/Optimizing-Tourist-Itineraries-Using-Simulated-Annealing/blob/main/SA_algorithm1.png" width="400" height="300"> <img src="https://github.com/thota-sasanth/Optimizing-Tourist-Itineraries-Using-Simulated-Annealing/blob/main/SA_1.png" width="400" height="300">
-</p>
-
-<br>
-
-The algorithm starts at a high temperature with a random initial solution and gradually finds an optimal solution after cooling down based on a neighborhood exploration strategy. The model flow chart looks like - 
-<br>
-<br>
-<p align="center">
-  <img src="https://github.com/thota-sasanth/Optimizing-Tourist-Itineraries-Using-Simulated-Annealing/blob/main/SA_flowchart.png" width="450" height="700">
-</p>
-
 ## Data Collection
 I have collected data from the following sources - 
 * NYC Trip data (Yellow taxis & High Volume For-Hire-Vehicles (HV-FHV)) from [TLC](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page#:~:text=,NYC%20Taxi%20and%20Limousine) 
@@ -142,11 +117,58 @@ Additionally, the below scatterplot shows that a majority of the low average hou
 
 ### Calendar / Events Impact
 
+The below sunburst chart shows the trips variation across different seasons - 
+<p align="center">
+  <br>
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/season.png" width="800" height="400"> 
+</p>
+
+There is a significant increase (around 22%) in taxi revenue from 2021 to 2022, which would probably indicate the effect of the COVID-19 pandemic. Apart from that, the highest revenue comes from the Fall season which could be related to various factors such as pleasant weather, the beginning of the school year, etc.
+
+Also, the below chart shows the revenue generated from different days (NYC holidays, weekends, weekdays) - 
+
+<p align="center">
+  <br>
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/holiday_trips.png" width="800" height="400"> 
+</p>
+
+We can observe that cabs make more revenue during a weekend over weekdays, this shows that people use cabs more frequently on weekends, and less on weekdays. Apart from that, we could also see that fewer people use cabs on holidays (NYC holidays).
+
+### Tipping Behavior
+
+The below packed bubble chart shows the top tipped locations in each NYC borough - 
+
+<p align="center">
+  <br>
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/tips.png" width="800" height="400"> 
+</p>
+
+The color intensities are derived based on the average tipping percentages in that zone. We can easily see zones that do significantly better within their borough in terms of ride tips (ex. Freshkills Park, Greenwood Cemetery, etc.)
+
+
+## Modeling & Results
+I have trained various models for predicting the base cab fare using ride related features, weather features, holiday, and season features. 
+The below are the 3 baseline models I've used -
+* Mean Model: The mean ‘base_passenger_fare’ from the training set was used to predict a constant value for the test dataset.
+* Linear Regression (LR):  I used linear regression as it is used to model the relationship between a dependent variable (in our case the fare) and one or more independent variables/features by fitting a linear equation to the observed data. This model seemed to perform significantly better when compared to the previous ‘Mean Model’.
+* Linear Regression with ElasticNet Regularization: I added ElasticNet regularizer to the Standard LR model in order to overcome some of the limitations such as overfitting and help improve the model’s generalization to the new data. I used a α value of 0.5 setting the strength of both L1 & L2 regularization terms to be equal.
+
+Other advanced models are - 
+* Random Forest Regression: Random Forests are good at capturing interactions between different features. They can automatically consider feature interactions without the need for explicit feature engineering. This is an ensemble approach which would often lead to more stable and reliable predictions compared to individual models (such as Decision Trees). It showed slightly better results compared to the previous baseline models.
+* Gradient Boosting Regression: Gradient Boosting Regression, especially in the form of algorithms like Gradient Boosted Trees (GBT), tends to provide high predictive accuracy for numerical prediction models. Apart from this, it is robust to overfitting and is an ensemble model that builds decision trees sequentially. It performed similar to Random Forest Regression.
+* Custom Ensemble Model: A custom ensemble model made out of the previously defined linear regression, random forest and gradient boosting models was defined. I have assigned weights for each model to be the inverse of their RMSE error on their predictions. This model provides a good amount of improvement on overall predictions.
+
+|  | RMSE | MAE | MAPE (%) | R2 |
+| --- | --- | --- | --- | --- |
+| Mean Model | 13.05 | 9.92 | 64.25 | -1.42 x 10^-14 | 
+| Linear Regression | 6.40 | 4.16 | 24.73 | 0.76 | 
+| Linear Regression + ElasticNet Regularization | 6.45 | 4.18 | 24.94 | 0.75 | 
+| Linear Regression | 6.38 | 4.07 | 23.64 | 0.76 | 
+| Linear Regression | 6.38 | 3.93 | 21.77 | 0.76 | 
+| Linear Regression | 6.19 | 3.56 | 20.96 | 0.73 | 
 
 
 
-
-## Results
 The below plots show the results for the best run for closed TSP scenario for 15 tourist attractions - 
 
 <p align="center">
