@@ -121,7 +121,7 @@ Additionally, the below scatterplot shows that a majority of the low average hou
 The below sunburst chart shows the trips variation across different seasons - 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/season.png" width="800" height="400"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/season.png" width="500" height="300"> 
 </p>
 
 There is a significant increase (around 22%) in taxi revenue from 2021 to 2022, which would probably indicate the effect of the COVID-19 pandemic. Apart from that, the highest revenue comes from the Fall season which could be related to various factors such as pleasant weather, the beginning of the school year, etc.
@@ -130,7 +130,7 @@ Also, the below chart shows the revenue generated from different days (NYC holid
 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/holiday_trips.png" width="500" height="300"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/holiday_trips.png" width="800" height="400"> 
 </p>
 
 We can observe that cabs make more revenue during a weekend over weekdays, this shows that people use cabs more frequently on weekends, and less on weekdays. Apart from that, we could also see that fewer people use cabs on holidays (NYC holidays).
