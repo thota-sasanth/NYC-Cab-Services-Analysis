@@ -31,7 +31,7 @@ Considering that the total data has __0.5 Billion+__ NYC taxi trips (>90 GB size
 <br>
 Finally, I was able to sucessfully work on the data using the following setup -
 
-* Databricks (with PySpark) + Azure Data Lake Storage : I configured separate Databricks clusters with distributed and scalable architecture, ranging from 4 to 8 worker nodes with one master node. Each node is powered by Photon acceleration, and delta cache optimization and is equipped with 16GB of RAM and 4 cores.
+* __Databricks (with PySpark) + Azure Data Lake Storage__: I configured separate Databricks clusters with distributed and scalable architecture, ranging from 4 to 8 worker nodes with one master node. Each node is powered by Photon acceleration, and delta cache optimization and is equipped with 16GB of RAM and 4 cores.
 
 ## Analysis:
 
