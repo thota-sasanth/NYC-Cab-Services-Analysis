@@ -90,7 +90,7 @@ It shows that HVFHV consistently charges more per mile than Yellow Cabs in all d
 The below histogram shows the relationship between the temperature and the number of rides -  
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/temperature_impact.png" width="800" height="400"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/temperature_impact.png" width="600" height="400"> 
 </p>
 
 There is a noticeable decline in ride counts as temperatures exceed 75 degrees. This suggests that very high temperatures (above 75) and very low temperatures (below 35) may deter people from taking rides.
