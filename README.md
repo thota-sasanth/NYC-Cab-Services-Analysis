@@ -46,7 +46,7 @@ The below choropleth map shows the distribution of ride pickups (left) and dropo
 
 <br>
 We can see that the spread of pickup and drop-offs are similar which conveys that the majority of cab rides are between a particular subset of taxi zones. The top 5 zones for pickups and dropoffs are the same (LaGuardia Airport, JFK Airport, Crown Heights North, East Village, Bushwick South) but in a different ranking order.
-
+<br>
 The below arc diagram shows the pickup frequency proportions among NYC boroughs - 
 
 <p align="center">
