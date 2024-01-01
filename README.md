@@ -19,9 +19,9 @@ The NYC TLC (Taxi & Limousine Commission) is a government agency responsible for
 
 ## Data Preprocessing
 * __Handling Unnecessary & Missing data__: I cleaned the dataset by dropping unnecessary columns such as dispatching_base_num. I also dropped columns that had more than 60% of the data as NaN, duplicate rows, and rows with null values.
-* Data Imputation & Outlier Handling: I applied mean/median imputations wherever it was appropriate. I removed outliers such as rows with a trip duration of 0 seconds, speeds > 200 mph, and fare < 0.
-* Feature Engineering: I applied label encoding and one hot encoding for categorical features such as trip_length_category. I engineered new features such as trip_speed, waiting_time, total_fare, trip_profit, etc.
-* Merging & Filtering: I filtered data within 2021-23 timelines. I merged taxi data, hourly weather data, and calendar data based on appropriate columns to get a single dataset. I aggregate the results from this dataset and combine them with census data whenever needed to get final outputs.
+* __Data Imputation & Outlier Handling__: I applied mean/median imputations wherever it was appropriate. I removed outliers such as rows with a trip duration of 0 seconds, speeds > 200 mph, and fare < 0.
+* __Feature Engineering__: I applied label encoding and one hot encoding for categorical features such as trip_length_category. I engineered new features such as trip_speed, waiting_time, total_fare, trip_profit, etc.
+* __Merging & Filtering__: I filtered data within 2021-23 timelines. I merged taxi data, hourly weather data, and calendar data based on appropriate columns to get a single dataset. I aggregate the results from this dataset and combine them with census data whenever needed to get final outputs.
 
 
 ## Experimental Setup:
