@@ -163,6 +163,7 @@ Other advanced models are -
 * __Custom Ensemble Model__: A custom ensemble model made out of the previously defined linear regression, random forest and gradient boosting models was defined. I have assigned weights for each model to be the inverse of their RMSE error on their predictions. This model provides a good amount of improvement on overall predictions.
 
 <br>
+
 |                  | RMSE  | MAE  | MAPE (%) | R2                |
 | ---------------- | ----- | ---- | -------- | ----------------- |
 | Mean Model       | 13.05 | 9.92 | 64.25    | -1.42 x 10^-14    | 
