@@ -153,15 +153,16 @@ The color intensities are derived based on the average tipping percentages in th
 ## Modeling & Results
 I have trained various models for predicting the base cab fare using ride related features, weather features, holiday, and season features. 
 The below are the 3 baseline models I've used -
-* Mean Model: The mean ‘base_passenger_fare’ from the training set was used to predict a constant value for the test dataset.
-* Linear Regression (LR):  I used linear regression as it is used to model the relationship between a dependent variable (in our case the fare) and one or more independent variables/features by fitting a linear equation to the observed data. This model seemed to perform significantly better when compared to the previous ‘Mean Model’.
-* Linear Regression with ElasticNet Regularization: I added ElasticNet regularizer to the Standard LR model in order to overcome some of the limitations such as overfitting and help improve the model’s generalization to the new data. I used a α value of 0.5 setting the strength of both L1 & L2 regularization terms to be equal.
+* __Mean Model__: The mean ‘base_passenger_fare’ from the training set was used to predict a constant value for the test dataset.
+* __Linear Regression (LR)__:  I used linear regression as it is used to model the relationship between a dependent variable (in our case the fare) and one or more independent variables/features by fitting a linear equation to the observed data. This model seemed to perform significantly better when compared to the previous ‘Mean Model’.
+* __Linear Regression with ElasticNet Regularization__: I added ElasticNet regularizer to the Standard LR model in order to overcome some of the limitations such as overfitting and help improve the model’s generalization to the new data. I used a α value of 0.5 setting the strength of both L1 & L2 regularization terms to be equal.
 
 Other advanced models are - 
-* Random Forest Regression: Random Forests are good at capturing interactions between different features. They can automatically consider feature interactions without the need for explicit feature engineering. This is an ensemble approach which would often lead to more stable and reliable predictions compared to individual models (such as Decision Trees). It showed slightly better results compared to the previous baseline models.
-* Gradient Boosting Regression: Gradient Boosting Regression, especially in the form of algorithms like Gradient Boosted Trees (GBT), tends to provide high predictive accuracy for numerical prediction models. Apart from this, it is robust to overfitting and is an ensemble model that builds decision trees sequentially. It performed similar to Random Forest Regression.
-* Custom Ensemble Model: A custom ensemble model made out of the previously defined linear regression, random forest and gradient boosting models was defined. I have assigned weights for each model to be the inverse of their RMSE error on their predictions. This model provides a good amount of improvement on overall predictions.
+* __Random Forest Regression__: Random Forests are good at capturing interactions between different features. They can automatically consider feature interactions without the need for explicit feature engineering. This is an ensemble approach which would often lead to more stable and reliable predictions compared to individual models (such as Decision Trees). It showed slightly better results compared to the previous baseline models.
+* __Gradient Boosting Regression__: Gradient Boosting Regression, especially in the form of algorithms like Gradient Boosted Trees (GBT), tends to provide high predictive accuracy for numerical prediction models. Apart from this, it is robust to overfitting and is an ensemble model that builds decision trees sequentially. It performed similar to Random Forest Regression.
+* __Custom Ensemble Model__: A custom ensemble model made out of the previously defined linear regression, random forest and gradient boosting models was defined. I have assigned weights for each model to be the inverse of their RMSE error on their predictions. This model provides a good amount of improvement on overall predictions.
 
+<br>
 |                  | RMSE  | MAE  | MAPE (%) | R2                |
 | ---------------- | ----- | ---- | -------- | ----------------- |
 | Mean Model       | 13.05 | 9.92 | 64.25    | -1.42 x 10^-14    | 
