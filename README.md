@@ -141,7 +141,7 @@ The below packed bubble chart shows the top tipped locations in each NYC borough
 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/tips.png" width="600" height="600"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/tips.png" width="700" height="700"> 
 </p>
 
 The color intensities are derived based on the average tipping percentages in that zone. We can easily see zones that do significantly better within their borough in terms of ride tips (ex. Freshkills Park, Greenwood Cemetery, etc.)
