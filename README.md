@@ -28,8 +28,9 @@ The NYC TLC (Taxi & Limousine Commission) is a government agency responsible for
 Considering that the total data has 0.5 Billion NYC taxi trips (>90 GB size), I experimented with different BIG DATA setups. 
 * Dask + Coiled Servers + GCP Buckets: Although the Dask framework performs well with Coiled servers (since a compatible ecosystem is being provided by the same company), I encountered reliability issues while loading large datasets, especially with data stored in GCP buckets and Azure Blob Storage.
 * Databricks (with PySpark) + Azure Blob Storage: I opted for Databricks due to its robust support for the PySpark framework, and initially chose Azure Blob Storage for data storage. However, after extensive testing, I found that Azure Blob Storage was not sufficiently efficient for reading large datasets.
+<br>
 Finally, I was able to sucessfully work on the data using the following setup -
-Databricks (with PySpark) + Azure Data Lake Storage: I configured separate Databricks clusters with distributed and scalable architecture, ranging from 4 to 8 worker nodes with one master node. Each node is powered by Photon acceleration, and delta cache optimization and is equipped with 16GB of RAM and 4 cores.
+* Databricks (with PySpark) + Azure Data Lake Storage: I configured separate Databricks clusters with distributed and scalable architecture, ranging from 4 to 8 worker nodes with one master node. Each node is powered by Photon acceleration, and delta cache optimization and is equipped with 16GB of RAM and 4 cores.
 
 ## Analysis:
 
@@ -49,7 +50,7 @@ The below arc diagram shows the pickup frequency proportions among NYC boroughs 
 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/borough_trips.png" width="800" height="400"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/borough_trips.png" width="500" height="400"> 
 </p>
 
 The coloured arcs represent the rides having pickup locations starting from the borough of the same colour & the thickness of the arc represents the number of rides. The size of each borough circle represents the proportion of total rides that happened in NYC. We can see that Manhattan has the highest share (40%) followed by Brooklyn. Staten Island has very less rides which aligns with it being the least populated borough. Also, the figure is roughly symmetrical (horizontally) reflecting a balanced transportation flow between these boroughs.
@@ -167,36 +168,5 @@ Other advanced models are -
 | Linear Regression | 6.38 | 3.93 | 21.77 | 0.76 | 
 | Linear Regression | 6.19 | 3.56 | 20.96 | 0.73 | 
 
-
-
-The below plots show the results for the best run for closed TSP scenario for 15 tourist attractions - 
-
-<p align="center">
-  Initial Solution having a total distance of 36,294.76 kms
-  <br>
-  <img src="https://github.com/thota-sasanth/Optimizing-Tourist-Itineraries-Using-Simulated-Annealing/blob/main/initial_sol.png" width="800" height="400"> 
-</p>
-<p align="center">
-  Final Solution having a total distance of 11,696.17 kms (around 68% reduction) 
-  <br>
-  <img src="https://github.com/thota-sasanth/Optimizing-Tourist-Itineraries-Using-Simulated-Annealing/blob/main/SA_sol.png" width="800" height="400">
-</p>
-
-The below plot shows how the total travel distance change w.r.t change in temperature - 
-
-<p align="center">
-  Starting Temperature 10000, 
-  Initial Distance 49,585.69 kms <br>
-  Final Distance 19,561.03 kms,  
-  Reduction 60.55% <br>
-  
-  <br>
-  <img src="https://github.com/thota-sasanth/Optimizing-Tourist-Itineraries-Using-Simulated-Annealing/blob/main/Temperature_variation.png" width="550" height="400"> 
-</p>
-
-Overall, the application of simulated annealing to itinerary optimization has proven to be a robust
-approach, capable of handling the complexity of the TSP with a high degree of efficiency. This project could be used as a valuable tool for tourists exploring
-a new country or anyone seeking assistance in crafting personalized and efficient travel itineraries.
 <br>
 <br>
-
