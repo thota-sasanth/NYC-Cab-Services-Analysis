@@ -130,7 +130,7 @@ Also, the below chart shows the revenue generated from different days (NYC holid
 
 <p align="center">
   <br>
-  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/holiday_trips.png" width="800" height="400"> 
+  <img src="https://github.com/thota-sasanth/NYC-Cab-Services-Analysis/blob/main/holiday_trips.png" width="700" height="400"> 
 </p>
 
 We can observe that cabs make more revenue during a weekend over weekdays, this shows that people use cabs more frequently on weekends, and less on weekdays. Apart from that, we could also see that fewer people use cabs on holidays (NYC holidays).
